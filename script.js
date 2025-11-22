@@ -169,6 +169,16 @@ function closeModal() {
     document.body.style.overflow = 'auto';
 }
 
+// Formatar texto com quebras de linha
+function formatText(text) {
+    if (!text) return '';
+    // Dividir por quebras de linha duplas e criar parágrafos separados
+    return text.split('\n\n')
+        .filter(p => p.trim())
+        .map(p => `<p>${p.trim().replace(/\n/g, '<br>')}</p>`)
+        .join('');
+}
+
 // Criar conteúdo do modal
 function createModalContent(item) {
     let sectionsHTML = '';
@@ -178,7 +188,7 @@ function createModalContent(item) {
         sectionsHTML += `
             <div class="modal-section">
                 <h3>📝 Roteiro</h3>
-                <p>${item.roteiro}</p>
+                ${formatText(item.roteiro)}
             </div>
         `;
     }
@@ -201,7 +211,7 @@ function createModalContent(item) {
         sectionsHTML += `
             <div class="modal-section">
                 <h3>💬 Legenda</h3>
-                <p>${item.legenda}</p>
+                ${formatText(item.legenda)}
             </div>
         `;
     }
@@ -211,7 +221,7 @@ function createModalContent(item) {
         sectionsHTML += `
             <div class="modal-section">
                 <h3>🎬 Sugestão de Criativo</h3>
-                <p>${item.criativo}</p>
+                ${formatText(item.criativo)}
             </div>
         `;
     }

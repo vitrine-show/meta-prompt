@@ -391,15 +391,10 @@ body {
 
 .modal-section p {
     color: var(--text-secondary);
-    line-height: 2;
-    white-space: pre-line;
+    line-height: 1.8;
     font-size: 0.95rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
     word-wrap: break-word;
-}
-
-.modal-section p + p {
-    margin-top: 1.5rem;
 }
 
 .modal-section ul {

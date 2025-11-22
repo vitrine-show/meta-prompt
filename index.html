@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca de Conteúdo Estratégico 2026</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="main-title">📚 Biblioteca de Conteúdo Estratégico 2026</h1>
+                <p class="subtitle">53 ideias de conteúdo geradas para impulsionar sua estratégia digital</p>
+            </div>
+        </header>
+
+        <!-- Filtros e Busca -->
+        <section class="filters-section">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="🔍 Buscar por título, categoria ou hashtag...">
+            </div>
+
+            <div class="filters">
+                <div class="filter-group">
+                    <label>Categoria:</label>
+                    <div class="filter-buttons" id="categoryFilters">
+                        <button class="filter-btn active" data-category="all">Todas</button>
+                        <button class="filter-btn" data-category="O Novo Algoritmo">O Novo Algoritmo</button>
+                        <button class="filter-btn" data-category="Andrômeda Meta Ads">Andrômeda Meta Ads</button>
+                        <button class="filter-btn" data-category="Maestria em IAs">Maestria em IAs</button>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <label>Formato:</label>
+                    <div class="filter-buttons" id="formatFilters">
+                        <button class="filter-btn active" data-format="all">Todos</button>
+                        <button class="filter-btn" data-format="Reel">Reel</button>
+                        <button class="filter-btn" data-format="Carousel">Carousel</button>
+                        <button class="filter-btn" data-format="Story Sequencial">Story Sequencial</button>
+                        <button class="filter-btn" data-format="Live">Live</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats">
+                <span class="stat-item">Total: <strong id="totalCount">53</strong></span>
+                <span class="stat-item">Exibindo: <strong id="displayCount">53</strong></span>
+            </div>
+        </section>
+
+        <!-- Grid de Cards -->
+        <section class="content-grid" id="contentGrid">
+            <!-- Os cards serão inseridos aqui via JavaScript -->
+        </section>
+
+        <!-- Modal de Detalhes -->
+        <div class="modal" id="contentModal">
+            <div class="modal-overlay"></div>
+            <div class="modal-content">
+                <button class="modal-close" id="closeModal">&times;</button>
+                <div id="modalBody">
+                    <!-- Conteúdo do modal será inserido aqui -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="data-complete.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
